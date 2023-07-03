@@ -1,10 +1,10 @@
-package com.ikjo.healtherwithtdd.domain.model;
+package com.ikjo.healtherwithtdd.domain.model.member;
 
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
-import com.ikjo.healtherwithtdd.constant.LoginType;
-import com.ikjo.healtherwithtdd.constant.Role;
+import com.ikjo.healtherwithtdd.domain.model.BaseEntity;
+import com.ikjo.healtherwithtdd.dto.member.userinfo.OAuth2UserInfo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -47,5 +47,15 @@ public class Member extends BaseEntity {
 		this.role = role;
 		this.oauthId = oauthId;
 		this.loginType = loginType;
+	}
+
+	public static Member create(OAuth2UserInfo oAuth2UserInfo) {
+		return Member.builder()
+			.email(oAuth2UserInfo.getEmail())
+			.name(oAuth2UserInfo.getName())
+			.role(Role.USER)
+			.oauthId(oAuth2UserInfo.getProviderId())
+			.loginType(oAuth2UserInfo.getProvider())
+			.build();
 	}
 }

@@ -1,9 +1,7 @@
-package com.ikjo.healtherwithtdd.constant;
+package com.ikjo.healtherwithtdd.domain.model.spacekind;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
-import lombok.Getter;
 
 public enum SpaceType {
 	GX("GX"),

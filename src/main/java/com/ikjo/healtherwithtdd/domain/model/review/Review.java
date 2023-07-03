@@ -1,7 +1,11 @@
-package com.ikjo.healtherwithtdd.domain.model;
+package com.ikjo.healtherwithtdd.domain.model.review;
 
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
+
+import com.ikjo.healtherwithtdd.domain.model.BaseEntity;
+import com.ikjo.healtherwithtdd.domain.model.member.Member;
+import com.ikjo.healtherwithtdd.domain.model.space.Space;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

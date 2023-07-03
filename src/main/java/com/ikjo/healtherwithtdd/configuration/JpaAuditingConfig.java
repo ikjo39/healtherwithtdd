@@ -1,2 +1,9 @@
-package com.ikjo.healtherwithtdd.configuration;public class JpaAuditingCOnfig {
+package com.ikjo.healtherwithtdd.configuration;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
+@Configuration
+@EnableJpaAuditing
+public class JpaAuditingConfig {
 }

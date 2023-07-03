@@ -1,10 +1,13 @@
-package com.ikjo.healtherwithtdd.domain.model;
+package com.ikjo.healtherwithtdd.domain.model.board;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
+
+import com.ikjo.healtherwithtdd.domain.model.BaseEntity;
+import com.ikjo.healtherwithtdd.domain.model.comment.Comment;
+import com.ikjo.healtherwithtdd.domain.model.member.Member;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -35,7 +38,7 @@ public class Board extends BaseEntity {
 	private Member member;
 
 	@OneToMany(mappedBy = "board")
-	private List<Comment> comments = new ArrayList<>();
+	private List<Comment> comments;
 
 	private String title;
 

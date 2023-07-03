@@ -1,11 +1,9 @@
-package com.ikjo.healtherwithtdd.domain.repository;
+package com.ikjo.healtherwithtdd.domain.model.member;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import com.ikjo.healtherwithtdd.domain.model.Member;
 
 @Repository
 public interface MemberRepository extends JpaRepository<Member, Long> {

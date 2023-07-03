@@ -1,4 +1,4 @@
-package com.ikjo.healtherwithtdd.domain.model;
+package com.ikjo.healtherwithtdd.domain.model.space;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -7,6 +7,14 @@ import java.util.Set;
 
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
+
+import com.ikjo.healtherwithtdd.domain.model.BaseEntity;
+import com.ikjo.healtherwithtdd.domain.model.convenience.Convenience;
+import com.ikjo.healtherwithtdd.domain.model.image.Image;
+import com.ikjo.healtherwithtdd.domain.model.member.Member;
+import com.ikjo.healtherwithtdd.domain.model.review.Review;
+import com.ikjo.healtherwithtdd.domain.model.spacekind.SpaceKind;
+import com.ikjo.healtherwithtdd.domain.model.spacetime.SpaceTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

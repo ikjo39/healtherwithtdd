@@ -1,2 +1,19 @@
-package com.ikjo.healtherwithtdd.configuration;public class WebMvcConfig {
+package com.ikjo.healtherwithtdd.configuration;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class WebMvcConfig implements WebMvcConfigurer {
+	@Override
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/**")
+			.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+			.allowedHeaders("*")
+			.allowedOriginPatterns("*")
+			.exposedHeaders("*")
+			.allowCredentials(true);
+		WebMvcConfigurer.super.addCorsMappings(registry);
+	}
 }

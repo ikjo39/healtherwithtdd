@@ -1,10 +1,10 @@
-package com.ikjo.healtherwithtdd.constant;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
+package com.ikjo.healtherwithtdd.domain.model.convenience;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
+@Getter
+@RequiredArgsConstructor
 public enum ConvenienceType {
 	SHOWER("SHOWER"),
 	PARKING("PARKING"),
@@ -14,25 +14,5 @@ public enum ConvenienceType {
 	FOOD("FOOD"),
 	BRING_FOOD("BRING_FOOD");
 
-	@Getter
-	private final String value;
-
-	ConvenienceType(String value) {
-		this.value = value;
-	}
-
-	@JsonCreator
-	public static ConvenienceType from(String value) {
-		for (ConvenienceType status : ConvenienceType.values()) {
-			if (status.getValue().equals(value)) {
-				return status;
-			}
-		}
-		return null;
-	}
-
-	@JsonValue
-	public String getValue() {
-		return value;
-	}
+	private final String text;
 }
